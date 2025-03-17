@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Scenario1 Page
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+<h1>
+    Let the game begin !!
+</h1>
+<br>
+<h2>The Jumbled word is </h2>
+<h2><p style="color:yellow">"{{ x }}"</p></h2>
+<div class="container">
+    <form method="POST" class="form-register" style="colour:white" autocomplete="off">
+        <br>
+        <h2>Go {{ currentUser }} !</h2>
+        <br>
+        {{ form.chance1.label() }}
+        {{ form.chance1(class="form-control", placeholder="Enter your answer") }}
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        <br>
+        <h2>{{ error }}</h2>
+        <!--    {{ message }} !
+        {{ picked_word }} !
+        {{ acutal_word }} !    -->
+        <h4>
+            {{ user1 }} : {{ score1 }} !
+            {{ user2 }} : {{ score2 }} !
+        </h4>
+        <br>
+        {{ wrong_guess }} {{ wrong_test }}
+        <br>
+        {{ meaning_intro }} {{ wrong_test }} {{ test }} {{ i }}
+        <br>
+        {{ meaning }}
+        <br>
+        {{ sentence_intro }} {{ wrong_test }} {{ test }} {{ i }}
+        <br>
+        {{ sentence }}
+    </form>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register Page
+{% endblock %}
+
+{% block content %}
+
+<body class="text-center">
+<div class="container">
+    <form method="POST" class="form-register" style="colour:white">
+        <br>
+        <image src="{{url_for('static',filename = 'img3.jpeg')}}">
+        </image>
+        <br>
+        <br>
+        <h1 class="h3 mb-3 font-weight-normal">
+            Players Information
+        </h1>
+        <br>
+
+        {{ form.user1.label() }}
+        {{ form.user1(class="form-control", placeholder="Player 1 , Please enter your name") }}
+        <br>
+        {{ messageforP1 }}
+        {{ form.user2.label() }}
+        {{ form.user2(class="form-control", placeholder="Player 2 , Please enter your name") }}
+        <br>
+        <br>
+        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+    </form>
+</div>
+</body>
+{% endblock %}
